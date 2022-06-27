@@ -70,6 +70,6 @@
     "git-clone": "^0.2.0",
     "js-yaml": "^4.1.0",
     "octokit": "^1.8.1",
-    "simple-git": "^3.9.0"
+    "simple-git": "^3.10.0"
   }
 }
