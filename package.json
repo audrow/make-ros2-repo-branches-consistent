@@ -1,5 +1,5 @@
 {
-  "name": "node-ts-template",
+  "name": "make-ros2-repo-branches-consistent",
   "version": "0.0.1",
   "description": "A starting point for NodeJS Typescript projects.",
   "source": "src/index.ts",
