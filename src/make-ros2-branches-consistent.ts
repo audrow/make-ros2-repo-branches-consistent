@@ -1,19 +1,19 @@
 import endent from 'endent'
 import {existsSync} from 'fs'
-import {downloadFile, makeCacheDir, pullGitRepo} from './cache'
 import {
-  getDistributionFile,
-  setDistributionVersion,
-  toDistributionFile,
-} from './distribution-file'
-import {createCommitAndPushFile} from './file-system'
-import {
-  createNewBranch,
-  getDefaultBranch,
-  retargetPrs,
-  setDefaultBranch,
-} from './github'
-import {getRepos, toReposFile} from './repos-file'
+  cache,
+  distributionFile,
+  fileSystem,
+  github,
+  reposFile,
+} from 'ros2-cache'
+const {downloadFile, makeCacheDir, pullGitRepo} = cache
+const {getDistributionFile, setDistributionVersion, toDistributionFile} =
+  distributionFile
+const {createCommitAndPushFile} = fileSystem
+const {createNewBranch, getDefaultBranch, retargetPrs, setDefaultBranch} =
+  github
+const {getRepos, toReposFile} = reposFile
 
 import fs from 'fs'
 import {join} from 'path'
