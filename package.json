@@ -1,25 +1,17 @@
 {
-  "name": "node-ts-template",
+  "name": "make-ros2-repo-branches-consistent",
   "version": "0.0.1",
   "description": "A starting point for NodeJS Typescript projects.",
-  "main": "dist/cjs/index.js",
-  "types": "dist/types/index.d.ts",
-  "module": "dist/esm/index.js",
   "source": "src/index.ts",
   "scripts": {
-    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
-    "build:cjs": "tsc --project ./tsconfig.cjs.json",
-    "build:esm": "tsc --project ./tsconfig.esm.json",
-    "build:types": "tsc --project ./tsconfig.types.json",
     "clean": "rm -rf dist",
     "prepare": "husky install",
     "lint": "eslint src --ignore-path .gitignore --max-warnings 0",
     "prettier": "prettier --ignore-path .gitignore \"**/*.(js|jsx|json|css|ts|tsx|md|mdx)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "test": "jest",
-    "validate-sync": "npm-run-all lint check-format build test",
-    "validate": "npm-run-all --parallel lint check-format build test"
+    "validate-sync": "npm-run-all lint check-format",
+    "validate": "npm-run-all --parallel lint check-format"
   },
   "files": [
     "dist"
@@ -45,16 +37,12 @@
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
-    "@types/git-clone": "^0.2.0",
-    "@types/jest": "^27.5.0",
-    "@types/js-yaml": "^4.0.5",
     "@types/proper-url-join": "^2.1.1",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
-    "jest": "^27.5.1",
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
@@ -64,7 +52,6 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "endent": "^2.1.0",
     "git-clone": "^0.2.0",
